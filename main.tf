@@ -1,3 +1,7 @@
+provider "azurerm" {
+  version = "~> 1.36"
+}
+
 resource "azurerm_resource_group" "main" {
   name     = "${var.prefix}-resources"
   location = var.location
@@ -39,4 +43,3 @@ module "log_analytics_solution" {
   workspace_resource_id = module.log_analytics_workspace.id
   workspace_name        = module.log_analytics_workspace.name
 }
-

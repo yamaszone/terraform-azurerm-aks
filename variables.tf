@@ -3,7 +3,7 @@ variable "prefix" {
 }
 
 variable "location" {
-  default     = "eastus"
+  default     = "westus2"
   description = "The location for the AKS deployment"
 }
 
@@ -42,11 +42,10 @@ variable "agents_count" {
 
 variable "kubernetes_version" {
   description = "Version of Kubernetes to install"
-  default     = "1.14.5"
+  default     = "1.14.8"
 }
 
 variable "public_ssh_key" {
   description = "A custom ssh key to control access to the AKS cluster"
   default     = ""
 }
-
